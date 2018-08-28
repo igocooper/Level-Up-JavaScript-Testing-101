@@ -1,10 +1,12 @@
-import { hello, add } from './App';
+import { hello, add, total } from './App';
 
 describe('hello', () => {
     it('Should return Hello', () => {
         expect(hello()).toBe('Hello');
     }) ;
 });
+
+// unit test
 
 describe('add', () => {
     it('Should add two numbers', () => {
@@ -23,5 +25,11 @@ describe('add', () => {
         expect(add(2, {2: '2'})).toBe(null);
         expect(add(3, {})).toBe(null);
     });
+});
+
+// integration test
+
+test('total', () => {
+    expect(total(5,20)).toBe('$25');
 });
 
