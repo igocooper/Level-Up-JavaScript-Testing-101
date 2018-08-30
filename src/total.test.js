@@ -17,10 +17,5 @@ test('total', () => {
     expect(add).toHaveBeenCalledTimes(2);
 });
 
-// integration test
-test('total with add', () => {
-    add.mockRestore(); 
-    expect(total(5,20)).toBe('$25');
-});
 
 
